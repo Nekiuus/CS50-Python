@@ -18,7 +18,7 @@ students=[]
 with open("students.cvs") as file:
     reader=csv.DictReader(file)
     for row in reader:
-        students.append({"name": row["name"], "country": row["country"]})
+        students.append({"name": row["name"], "country": row["country"]})  #or just .append(row)
 
 for student in sorted(students, key=lambda student: student["name"]):
     print(f"{student['name']} is in {student['country']}")
